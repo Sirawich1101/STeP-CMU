@@ -328,7 +328,7 @@ async function confirmReceipt() {
       headers: {'Content-Type':'application/json'},
       body: JSON.stringify({
         requestCode: code,
-        lineUserId:  lineUserId || requestData?.line_user_id || '',
+        lineUserId:  lineUserId || '',
       })
     });
     const json = await res.json().catch(() => ({}));
